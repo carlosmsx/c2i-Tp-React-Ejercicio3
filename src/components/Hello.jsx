@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Button } from 'react-bootstrap';
 
 const Hello = (props) => {
     const [msj,setMsj] = useState('');
@@ -6,7 +7,7 @@ const Hello = (props) => {
     return (
         <div>
             <h1>Hello {props.nombre}{msj}!</h1>
-            <button onClick={()=>setMsj("(from changed State)")}>Click me</button>
+            <Button variant="primary" onClick={()=>setMsj("(from changed State)")}>Click me</Button>
         </div>
     );
 };
